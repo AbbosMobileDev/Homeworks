@@ -1,4 +1,4 @@
-//package task1;
+//package Lesson9_homeworks.task1;
 //
 //public class Telegram {
 //    private User user;
