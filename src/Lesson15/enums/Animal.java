@@ -1,4 +1,4 @@
-package Lesson15;
+package Lesson15.enums;
 
 public enum Animal {
     CAT(){
