@@ -11,7 +11,7 @@ public class Main {
         if (a >= 1 && a <= 12) {
             Month month = Month.values()[a - 1];
 
-            if (a <= 2 && a == 12) {
+            if (a <= 2 || a == 12) {
                 System.out.println(month + " oy " + Season.QISH + " Fasli");
             } else if (a >= 3 && a <= 5) {
                 System.out.println(month + " oyi " + Season.BAHOR + " Fasli");
