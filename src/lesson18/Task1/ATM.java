@@ -21,6 +21,8 @@ public class ATM {
         return messageInterface != null;
     }
 
+
+
     private boolean hasShowMoneyListener() {
         return showMoneyInterface != null;
     }
