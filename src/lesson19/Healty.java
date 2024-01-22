@@ -7,6 +7,8 @@ public class Healty {
         return healtyFoods;
     }
 
+    //
+
     public void setHealtyFoods(String healtyFoods) {
         this.healtyFoods = healtyFoods;
     }
