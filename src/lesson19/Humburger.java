@@ -1,10 +1,13 @@
 package lesson19;
 
-public class Humburger {
+public class Humburger extends Healty {
     private String typeOfRulon;
     private String typeOfMeat;
     private double prise;
-    private String differentFoods;
+
+    private  double priceHumburger=prise;
+
+Healty healty;
 
     @Override
     public String toString() {
@@ -12,16 +15,8 @@ public class Humburger {
                 "typeOfRulon='" + typeOfRulon + '\'' +
                 ", typeOfMeat='" + typeOfMeat + '\'' +
                 ", prise=" + prise +
-                ", differentFoods='" + differentFoods + '\'' +
+                ", priceHumburger=" + priceHumburger +
                 '}';
-    }
-
-    public String getDifferentFoods() {
-        return differentFoods;
-    }
-
-    public void setDifferentFoods(String differentFoods) {
-        this.differentFoods = differentFoods;
     }
 
     public Humburger(String typeOfRulon, String typeOfMeat, double prise) {
