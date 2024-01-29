@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SocialRepository {
-    ShowInfoInterface showInfoInterface = null;
-    ShowMessageInterface showMessageInterface = null;
+
+    private ShowInfoInterface showInfoInterface = null;
+    private ShowMessageInterface showMessageInterface = null;
     List<VideoData> videos = new ArrayList<>();
     List<UserData> users = new ArrayList<>();
 
@@ -17,6 +18,7 @@ public class SocialRepository {
     }
 
     private boolean hasShowInfoListener() {
+
         return showInfoInterface != null;
     }
 
@@ -27,6 +29,7 @@ public class SocialRepository {
     }
 
     private boolean hasShowMessageListener() {
+
         return showMessageInterface != null;
     }
 
@@ -56,25 +59,26 @@ public class SocialRepository {
     void LikeTheVide(VideoData videoData) {
         for (int i = 0; i < videos.size(); i++) {
             if (videos.get(i) == videoData) {
-                videos.get(i).setLikeCount(videos.get(i).getLikeCount()+1);
+                videos.get(i).setLikeCount(videos.get(i).getLikeCount() + 1);
 
-            } else if(videos.contains(videoData)==false) {
+            } else if (videos.contains(videoData) == false) {
                 showMessageInterface.showMessage("Xatolik: Bunday video topilmadi");
             }
         }
     }
+
     void dislLkeTheVide(VideoData videoData) {
         for (int i = 0; i < videos.size(); i++) {
             if (videos.get(i) == videoData) {
-                videos.get(i).setDislikeCount(videos.get(i).getDislikeCount()+1);
+                videos.get(i).setDislikeCount(videos.get(i).getDislikeCount() + 1);
 
-            } else if(videos.contains(videoData)==false) {
+            } else if (videos.contains(videoData) == false) {
                 showMessageInterface.showMessage("Xatolik: Bunday video topilmadi");
             }
         }
     }
 
-    void getAllVideo(){
+    void getAllVideo() {
         for (int i = 0; i < videos.size(); i++) {
             showInfoInterface.showInfo(videos.get(i));
         }
@@ -91,4 +95,16 @@ public class SocialRepository {
 
     }
 
+    void getTopVideos(int count) {
+        if (videos.size() < count) {
+            videos.stream().sorted();
+            for (int i = 0; i < videos.size(); i++) {
+                System.out.println(videos.get(i));
+            }
+
+        }
+
+    }
 }
+
+

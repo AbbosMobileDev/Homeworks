@@ -1,9 +1,9 @@
 package lesson21.Social_Network;
 
-public class VideoData {
-    private String title ;
+public class VideoData implements Comparable<VideoData>{
+    private String title;
     private String desprition;
-    private int likeCount;
+     int likeCount;
     private int dislikeCount;
 
     public VideoData(String title, String desprition, int likeCount, int dislikeCount) {
@@ -37,5 +37,11 @@ public class VideoData {
 
     public void setDislikeCount(int dislikeCount) {
         this.dislikeCount = dislikeCount;
+    }
+
+    @Override
+    public int compareTo(VideoData o) {
+        
+        return 0;
     }
 }
