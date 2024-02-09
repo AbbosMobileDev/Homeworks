@@ -7,5 +7,6 @@ public class Array {
 
         ArrayList<Integer> arrayList =new ArrayList();
         arrayList.add(23);
+        arrayList.get(0);
     }
 }

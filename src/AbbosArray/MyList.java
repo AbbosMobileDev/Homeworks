@@ -2,25 +2,36 @@ package AbbosArray;
 
 public class MyList<T> {
 
+    private static final Object[] EMPTY_ELEMENTDATA = {};
+    private int capasity;
+    private Object[] obj;
+    private static final Object[] default_obj = {};
     private int index = 0;
-    private int copasity=10;
-    private int size=0;
-    private T[] myList = (T[]) new Object[copasity];
+    private int size = 0;
 
-    public MyList(int copasity) {
-        this.copasity = copasity;
+    public MyList(int capasity) {
+        this.capasity = capasity;
+        obj = new Object[capasity];
     }
-    public void add(T value) {
-        if (size==copasity) this.copasity=copasity*3/2+1;
-        myList[index++] = value;
+
+    public MyList() {
+        this.capasity = 10;
+        obj = new Object[capasity];
+    }
+
+    public void add(int element) {
+        capasity();
+        obj[index++] = element;
         size++;
+
+    }
+    public void capasity() {
+        if (capasity == size) {
+            capasity = (capasity * 3) / 2 + 1;
+        }
+    }
+    public T getElement(int indexOfElement){
+        return (T) obj[indexOfElement];
     }
 
-    public int lenght() {
-        return myList.length;
-    }
-
-    public T get(int index) {
-        return myList[index];
-    }
 }
