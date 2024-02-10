@@ -6,16 +6,18 @@ public class MyList<T> {
     private int capasity;
     private Object[] obj;
     private int size = 0;
+
     public MyList(int capasity) {
         this.capasity = capasity;
         obj = new Object[capasity];
     }
+
     public MyList() {
         this.capasity = 10;
         obj = new Object[capasity];
     }
 
-    public void add(Object c) {
+    public void add(T c) {
         capasity();
         Object[] objects = new Object[capasity];
         int i = 0;
@@ -28,26 +30,32 @@ public class MyList<T> {
         size();
 
     }
+
     public void capasity() {
-        if (capasity-size<=0) {
+        if (capasity - size <= 0) {
             capasity = (capasity * 3) / 2 + 1;
         }
     }
-    public T getElement(int indexOfElement){
+
+    public T getElement(int indexOfElement) {
         return (T) obj[indexOfElement];
     }
-    public int getSize(){
+
+    public int getSize() {
         return size;
     }
-    public int getLenght(){
+
+    public int getLenght() {
         return obj.length;
     }
-    public boolean search(T element){
+
+    public boolean search(T element) {
         for (Object o : obj) {
-            if (o== element) return true;
+            if (o == element) return true;
         }
         return false;
     }
+
     public int size() {
         int count = 0;
         for (Object o : obj) {
@@ -59,22 +67,23 @@ public class MyList<T> {
         size = count;
         return size;
     }
-    public int IndexOfelement(T element){
-        for (int i = 0; i < size()-1; i++) {
-            if (obj[i]==element) return i;
-        }
-        return -1;
-    }
-    public int IndexOfLast(T element){
-        for (int i = size()-1; i>=0; i--) {
-            if (obj[i]==element) return i;
+
+    public int IndexOfelement(T element) {
+        for (int i = 0; i < size() - 1; i++) {
+            if (obj[i] == element) return i;
         }
         return -1;
     }
 
+    public int IndexOfLast(T element) {
+        for (int i = size() - 1; i >= 0; i--) {
+            if (obj[i] == element) return i;
+        }
+        return -1;
+    }
 
     @Override
     public String toString() {
-        return Arrays.toString(Arrays.copyOf(obj,size));
+        return Arrays.toString(Arrays.copyOf(obj, size));
     }
 }

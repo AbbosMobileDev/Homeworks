@@ -10,7 +10,7 @@ public class Poligon {
         abbosList.add(34);
         abbosList.add(34);
         abbosList.add(34);
-        abbosList.add(34);
+        abbosList.add(23);
         abbosList.add(34);
         abbosList.add(34);
         abbosList.add(34);
