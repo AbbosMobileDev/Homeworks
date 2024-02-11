@@ -8,7 +8,7 @@ public class MyList<T> {
     private int size = 0;
 
     public MyList(int capasity) {
-        this.capasity = capasity;
+        this.capasity = capasity
         obj = new Object[capasity];
     }
 
