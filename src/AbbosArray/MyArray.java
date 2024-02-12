@@ -1,7 +1,7 @@
 package AbbosArray;
 
 public interface MyArray<T> {
-    void add(T c);
+
     void capasity();
     T getElement(int indexOfElement);
     int getSize();

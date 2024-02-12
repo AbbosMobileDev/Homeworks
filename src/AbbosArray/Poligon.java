@@ -17,11 +17,10 @@ public class Poligon {
         abbosList.add(34);
         abbosList.add(34);
         abbosList.add(34);
-//Hello
-
-
 
         System.out.println(abbosList);
+        System.out.println(abbosList.search(34));
+        System.out.println(abbosList.getElement(2));
 
         System.out.println(abbosList.getSize());
     }

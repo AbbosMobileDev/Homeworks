@@ -14,33 +14,35 @@ public class UzumRegisterAccaunt {
 
         switch (begin) {
             case 1:
-                System.out.println("Username kiriting :");
+                System.out.println(" Username kiriting :");
                 String username = scanner.next();
                 if (!database.userName.search(username)) {
-
-                    System.out.println("Telefon raqamni kiriting :");
+                    database.userName.add(username);
+                    System.out.println(" Telefon raqamni kiriting :");
                     String telephoneNumber = scanner.next();
                     if (!database.telephoneNumber.search(telephoneNumber)) {
                         database.telephoneNumber.add(telephoneNumber);
+                        System.out.println("Parolni kiriting :");
+                        String pasword = scanner.next();
+                        database.passvorord.add(pasword);
+                        System.out.println("Siz muvofaqqiyatli ro'yxatdan o'tdingiz !");
+
                     } else {
                         System.out.println("bu raqam ro'yxatdan o'tgan iltimos qaytadan urinib koring");
 
                     }
-                    database.userName.add(username);
-                    System.out.println("Parolni kiriting :");
-                    String pasword = scanner.next();
-                    database.passvorord.add(pasword);
-                    System.out.println("Siz muvofaqqiyatli ro'yxatdan o'tdingiz !");
+
+
                 } else {
-                    System.out.println("Bu foydalanuvchi oldin royxatdan o'tgan");
-                    // nishon qoyish kerak case 1 dan keyin
+                    System.out.println("Bu foydalanuvchi oldin royxatdan o'tgan! Iltimos qaytadan urinib ko'ring ");
+
                 }
                 break;
             case 2:
-                System.out.print("Usernameni kiriting");
+                System.out.print("Usernameni kiriting : ");
                 String userName1 = scanner.next();
-                if (!database.userName.search(userName1)) {
-                    System.out.print("Bunday user mavjud emas ! Iltimos boshqatdan urinib ko'ring !");
+                if (database.userName.search(userName1)) {
+                    System.out.println("Bunday user mavjud emas ! Iltimos boshqatdan urinib ko'ring !");
                     //goto qoyish kerak case 2 dan kein
                 } else {
                     System.out.print("Paswordni kiriting:");
