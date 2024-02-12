@@ -41,13 +41,13 @@ public class UzumRegisterAccaunt {
             case 2:
                 System.out.print("Usernameni kiriting : ");
                 String userName1 = scanner.next();
-                if (database.userName.search(userName1)) {
+                if (!database.userName.search(userName1)) {
                     System.out.println("Bunday user mavjud emas ! Iltimos boshqatdan urinib ko'ring !");
                     //goto qoyish kerak case 2 dan kein
                 } else {
                     System.out.print("Paswordni kiriting:");
                     String pasword2 = scanner.next();
-                    if (Objects.equals(database.passvorord.getElement(database.userName.IndexOfelement(userName1)), pasword2)) {
+                    if (database.passvorord.getElement(database.userName.IndexOfelement(userName1))==pasword2){
                         System.out.println("Siz muvofaqqiyatli akkauntga kirdingiz");
                     } else {
                         System.out.println("Parol xato! Qayta urinib ko'ring .");
