@@ -69,6 +69,7 @@ public class UzumRegisterAccaunt {
                         //goto qoyish kk 58-qatordan keyin
                     }
                 }
+                break;
 
             default:
                 System.out.println("Siz mavjud bo'lmagan bo'limni taladingiz ");
