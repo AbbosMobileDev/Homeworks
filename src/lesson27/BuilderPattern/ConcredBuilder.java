@@ -40,6 +40,7 @@ public class ConcredBuilder implements Builder {
     public void setOwnerName(String ownerName) {
         this.ownerName=ownerName;
     }
-    public Home build(){ return new Home(homePrice,wallColor, windowCount, doorCount, doorColor, ownerName);}
+    public Home build(){
+        return new Home(homePrice,wallColor, windowCount, doorCount, doorColor, ownerName);}
 
 }
