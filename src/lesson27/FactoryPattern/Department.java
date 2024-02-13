@@ -1,14 +1,14 @@
 package lesson27.FactoryPattern;
 
 public abstract class Department {
-    private String departmentName;
+    private String name;
 
-    public Department(String departmentName) {
-        this.departmentName = departmentName;
+    public Department(String name) {
+        this.name = name;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+    public String getName() {
+        return name;
     }
     abstract String getDutyOfDepartment();
 }

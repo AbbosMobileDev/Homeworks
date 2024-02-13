@@ -13,6 +13,6 @@ public class Main {
 
         Department department1= departmentCreator.crateDepartment(department,name);
         System.out.println(department1.getDutyOfDepartment());
-        System.out.println(department1.getDepartmentName());
+        System.out.println(department1.getName());
     }
 }
