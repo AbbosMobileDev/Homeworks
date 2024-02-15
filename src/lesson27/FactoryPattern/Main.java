@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Please enter your department!");
         String department = scanner.nextLine();
 
-        Department department1= departmentCreator.crateDepartment(department,name);
+        Department department1= departmentCreator.createDepartmentWrapper(department,name);
         System.out.println(department1.getDutyOfDepartment());
         System.out.println(department1.getName());
     }
